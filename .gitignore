@@ -7,6 +7,15 @@ db.sqlite3
 media
 grandes_altitudes/settings.py
 
+# Environments 
+.env 
+.venv 
+env/ 
+venv/ 
+ENV/ 
+env.bak/ 
+venv.bak/ 
+
 # Backup files # 
 *.bak 
 
@@ -96,15 +105,6 @@ celerybeat-schedule.*
 
 # SageMath parsed files 
 *.sage.py 
-
-# Environments 
-.env 
-.venv 
-env/ 
-venv/ 
-ENV/ 
-env.bak/ 
-venv.bak/ 
 
 # mkdocs documentation 
 /site 
