@@ -4,7 +4,8 @@ from .models import *
 
 # Create your views here.
 def index(request):
-    return render(request, "index.html")
+    subjects = ("Português","Matemática","História","Física","Quimica","Geografia","Filosofia","Sociologia",)
+    return render(request, "index.html", {'subjects': subjects})
 
 def about(request):
     pass
