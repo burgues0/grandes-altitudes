@@ -8,12 +8,12 @@ class user_login(models.Model):
 class coordinator(models.Model):
     name = models.CharField(max_length=50)
     phone_number = models.CharField(max_length=12)
-    email = models.ForeignKey(user_login, on_delete=models.CASCADE, primary_key=True)
+    email = models.OneToOneField(user_login, on_delete=models.CASCADE, primary_key=True)
 
 class volunteer(models.Model):
     name = models.CharField(max_length=50)
     phone_number = models.CharField(max_length=12)
-    email = models.ForeignKey(user_login, on_delete=models.CASCADE, primary_key=True)
+    email = models.OneToOneField(user_login, on_delete=models.CASCADE, primary_key=True)
 
 class materials(models.Model):
     id_material = models.IntegerField(primary_key=True)
