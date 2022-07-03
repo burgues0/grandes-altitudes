@@ -1,9 +1,10 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 from .models import *
 
 # Create your views here.
 def index(request):
-    pass
+    return HttpResponse("<p>a</p>")
 
 def about(request):
     pass
