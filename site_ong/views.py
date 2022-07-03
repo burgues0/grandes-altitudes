@@ -4,7 +4,7 @@ from .models import *
 
 # Create your views here.
 def index(request):
-    return HttpResponse("<p>a</p>")
+    return render(request, "index.html")
 
 def about(request):
     pass
