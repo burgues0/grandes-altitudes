@@ -1,1 +1,4 @@
 /* caso a gente queira colocar algum css especifico para sobescrever o do bootstrap */
+.main_blue_color{
+    background-color: #73CEE3;
+}
