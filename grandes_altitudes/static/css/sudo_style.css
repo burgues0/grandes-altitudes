@@ -1,4 +1,9 @@
 /* caso a gente queira colocar algum css especifico para sobescrever o do bootstrap */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 .main_blue_color{
     background-color: #73CEE3;
 }
@@ -7,7 +12,7 @@
     background-color: #445EEB;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
+.carousel {
+    width:640px;
+    height:360px;
 }
