@@ -7,8 +7,8 @@ def index(request):
     subjects = ("Português","Matemática","História","Física","Quimica","Geografia","Filosofia","Sociologia",)
     return render(request, "index.html", {'subjects': subjects})
 
-def register(request):
-    return render(request, "register.html")
+def signup(request):
+    return render(request, "signup.html")
 
 def subjects(request):
     pass
