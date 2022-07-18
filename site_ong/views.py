@@ -10,5 +10,5 @@ def index(request):
 def signup(request):
     return render(request, "signup.html")
 
-def subjects(request):
+def login(request):
     pass
