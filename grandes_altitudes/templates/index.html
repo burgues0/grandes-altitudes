@@ -16,32 +16,46 @@
 <!--body start-->
 <body class="d-flex flex-column h-100 p-0">
 <!--navbar start-->
-<div class="container main_blue_color">
-  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-    <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 ms-4 text-dark text-decoration-none">
-      <!--colocar a logo da ong-->
-      <i class="fa-brands fa-youtube fa-2x"></i>
-    </a>
-    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="/" class="nav-link px-2 link-dark">Home</a></li>
-      <li class="nav-item dropdown">
-        <a class="nav-link link-dark active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Matérias
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            {% for subject in subjects %}
-            <li><a class="dropdown-item" href="#">{{subject}}</a></li>
-            {% endfor %}
-        </ul>
-      </li>
-      <li><a href="#" class="nav-link px-2 link-dark">Doações</a></li>
-      <li><a href="#" class="nav-link px-2 link-dark">Depoimentos</a></li>
-    </ul>
-
-    <div class="col-md-3 text-end">
-      <a href="signup"><button type="button" class="btn btn-outline-primary me-2">Login</button></a>
-    </div>
-  </header>
+<div class="container main_blue_color" role="navigation">
+  <nav class="navbar navbar-expand-md">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggler">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-2">
+                      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 ms-4 text-dark text-decoration-none">
+                          <!--colocar a logo da ong-->
+                          <i class="fa-brands fa-youtube fa-2x"></i>
+                      </a>
+                  </div>
+                  <div class="col align-self-center">
+                      <ul class="nav justify-content-center mb-md-0">
+                          <li><a href="/" class="nav-link px-2 link-dark">Home</a></li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link link-dark active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Matérias
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                {% for subject in subjects %}
+                                <li><a class="dropdown-item" href="#">{{subject}}</a></li>
+                                {% endfor %}
+                            </ul>
+                          </li>
+                          <li><a href="#" class="nav-link px-2 link-dark">Doações</a></li>
+                          <li><a href="#" class="nav-link px-2 link-dark">Depoimentos</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-2">
+                      <div class="text-end">
+                          <a href="signup"><button type="button" class="btn btn-outline-primary me-2">Login</button></a>
+                        </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </nav>
 </div>
 <!--navbar end-->
 <!--page content start-->
