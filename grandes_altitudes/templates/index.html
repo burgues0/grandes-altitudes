@@ -17,44 +17,18 @@
 <!--body start-->
 <body class="h-100 p-0">
 <!--navbar start-->
-<div class="container main_blue_color" role="navigation">
-  <header>
-    <nav class="navbar navbar-expand-md navbar-light main_blue_color fs-5" role="navigation">
-      <div class="container-fluid">
-        <a class="navbar-brand fs-4" href="#">Grandes Altitudes</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-md-center me-5 pe-3" id="navbarSupportedContent">
-          <ul class="navbar-nav mb-lg-0 gap-2">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Quem Somos</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Matérias
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  {% for subject in subjects %}
-                <li><a class="dropdown-item" href="#">{{subject}}</a></li>
-                  {% endfor %}
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Doações</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Depoimentos</a>
-            </li>
-          </ul>
-        </div>
-        <form class="d-flex">
-          <button class="btn btn-outline-primary btn-lg" type="submit" style="background-color: #445EEB;">Login</button>
-        </form>
-      </div>
-    </nav>
-  </header>
-</div>
+<header>
+  <img class="ong_logo" src="" alt="logo">
+  <nav>
+    <ul class="nav_links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Matérias</a></li>
+      <li><a href="/">Doações</a></li>
+      <li><a href="/">Depoimentos</a></li>
+    </ul>
+  </nav>
+  <a class="signup_button" href="signup"><button>Sign-up</button></a>
+</header>
 <!--navbar end-->
 <!--page content start-->
 <main class="flex-shrink-0">
