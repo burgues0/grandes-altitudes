@@ -7,14 +7,22 @@
     padding: 0;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-}
-
 li, a, button {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.ong_logo {
+    cursor: pointer;
 }
 
 .main_blue_color{
