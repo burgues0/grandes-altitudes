@@ -1,21 +1,17 @@
 /* caso a gente queira colocar algum css especifico para sobescrever o do bootstrap */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-/*
-1px = 0,0625rem
-
-standard blue
-#73CEE3
-
-
-*/
-
-/* begin navbar css */
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+li, a, button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #edf0f1;
+    text-decoration: none;
 }
 
 header {
@@ -23,65 +19,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-    background-color: #73CEE3;
-}
-
-header > * {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    color: #EDF0F1;
-    text-decoration: none;
 }
 
 .ong_logo {
     cursor: pointer;
 }
-
-.nav_links {
-    list-style: none;
-}
-
-.nav_links > li {
-    display: inline-block;
-    padding: 0rem 1.25rem;
-}
-
-.nav_links > li > a {
-    color: #EDF0F1;
-    transition: all 0.3s ease 0s;
-}
-
-.nav_links > li > a:hover {
-    color: #0088a9;
-}
-
-ul.nav_links {
-    margin: 0 0 0 0;
-}
-
-a.redir_signup button{
-    padding: 0.5625rem 1.5625rem;
-    background-color: rgba(0, 136, 169, 1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-a.redir_signup button:hover {
-    background-color: rgba(0, 136, 169, 0.8);
-}
-
-/*end navbar css*/
-
-a:link { text-decoration: none; }
-
-a:visited { text-decoration: none; }
-
-a:hover { text-decoration: none; }
-
-a:active { text-decoration: none; }
 
 .main_blue_color{
     background-color: #73CEE3;
