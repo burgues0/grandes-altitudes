@@ -18,7 +18,7 @@ standard blue
     padding: 0;
 }
 
-header {
+.primary-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,6 +36,7 @@ header > * {
 
 .ong_logo {
     cursor: pointer;
+    width: 5%;
 }
 
 .nav_links {
