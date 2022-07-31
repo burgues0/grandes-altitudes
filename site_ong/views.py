@@ -12,3 +12,6 @@ def signup(request):
 
 def login(request):
     pass
+
+def depoiments(request):
+    return render(request, "depoiments.html")#{'depoiments': depoiment}

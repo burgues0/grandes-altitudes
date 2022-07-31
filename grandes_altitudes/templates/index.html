@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br" class="h-100">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,125 +14,215 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/06b6347210.js" crossorigin="anonymous"></script>
 </head>
-<!--body start-->
-<body class="d-flex flex-column h-100 p-0">
-<!--navbar start-->
-<div class="container main_blue_color" role="navigation">
-  <nav class="navbar navbar-expand-md">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarToggler">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-2">
-                      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 ms-4 text-dark text-decoration-none">
-                          <!--colocar a logo da ong-->
-                          <i class="fa-brands fa-youtube fa-2x"></i>
-                      </a>
-                  </div>
-                  <div class="col align-self-center">
-                      <ul class="nav justify-content-center mb-md-0">
-                          <li><a href="/" class="nav-link px-2 link-dark">Home</a></li>
-                          <li class="nav-item dropdown">
-                            <a class="nav-link link-dark active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Matérias
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                {% for subject in subjects %}
-                                <li><a class="dropdown-item" href="#">{{subject}}</a></li>
-                                {% endfor %}
-                            </ul>
-                          </li>
-                          <li><a href="#" class="nav-link px-2 link-dark">Doações</a></li>
-                          <li><a href="#" class="nav-link px-2 link-dark">Depoimentos</a></li>
-                      </ul>
-                  </div>
-                  <div class="col-md-2">
-                      <div class="text-end">
-                          <a href="signup"><button type="button" class="btn btn-outline-primary me-2">Login</button></a>
-                        </div>
+
+<!-- BODY start-->
+  <body class="d-flex flex-column h-100 p-0" style="background-color: #F7F7D5;">
+    
+    <!--NAVBAR START-->
+    <div class="container main_blue_color" role="navigation">
+      <nav class="navbar navbar-expand-md">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarToggler">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-2">
+                          <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 ms-4 text-dark text-decoration-none">
+                              <!--colocar a logo da ong-->
+                              <img src="../static/img/logo.jfif" alt="logo_ONG" height=70px>
+                              <!--colocar a logo da ong-->
+                          </a>
+                      </div>
+                      
+                      <div class="col align-self-center">
+                          <ul class="nav justify-content-center mb-md-0">
+                              <li><a href="/" class="nav-link px-2 link-dark">Home</a></li>
+                              <li class="nav-item dropdown">
+                                <a class="nav-link link-dark active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Matérias
+                                </a>
+
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    {% for subject in subjects %}
+                                    <li><a class="dropdown-item" href="#">{{subject}}</a></li><!-- MOSTRA AS MATÉRIAS UMA EM BAIXO DA OUTRA-->
+                                    {% endfor %}
+                                </ul>
+
+                              </li>
+                              <li><a href="#" class="nav-link px-2 link-dark">Doações</a></li>
+                              <li><a href="depoiments" class="nav-link px-2 link-dark">Depoimentos</a></li>
+                          </ul>
+                      </div>
+
+                      <div class="col-md-2">
+                          <div class="text-end">
+                              <a href="signup"><button type="button" class="btn btn-outline-primary me-2">Login</button></a>
+                            </div>
+                      </div>
+
                   </div>
               </div>
           </div>
-      </div>
-  </nav>
-</div>
-<!--navbar end-->
-<!--page content start-->
-<main class="flex-shrink-0">
-  <div class="container p-0">
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
-  
-          <div class="container">
-            <div class="carousel-caption text-start">
-              <h1>Example headline.</h1>
-              <p>Some representative placeholder content for the first slide of the carousel. AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
-  
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Some representative placeholder content for the second slide of the carousel.</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item active">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
-  
-          <div class="container">
-            <div class="carousel-caption text-end">
-              <h1>One more for good measure.</h1>
-              <p>Some representative placeholder content for the third slide of this carousel.</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+          
+      </nav>
     </div>
-  </div>
-</main>
-<!--page content end-->
-<!--footer start-->
-<div class="container mt-auto main_blue_color">
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top main_blue_color">
-    <div class="col-md-4 d-flex align-items-center ps-4">
-      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-        <!--colocar a logo da ong-->
-        <a class="text-muted" href="#"><i class="fa-brands fa-instagram fa-2x"></i>
-      </a>
-      <span class="text-muted fs-3 ps-1">Grandes Altitudes</span>
+    <!--navbar end-->
+
+
+    <!--SLIDES content start-->
+    <main class="flex-shrink-0">
+      <div class="container p-0">
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+          
+          <div class="carousel-indicators"><!-- indicadores de indices(os tracinhos cinza)-->
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+          </div>
+          
+          <div class="carousel-inner"><!-- barra de navegação -->
+            
+            
+            <div class="carousel-item"><!-- Item 1 -->
+              
+              <!--Tentativa de colocar uma imagem igual está no Figma.-->
+              <!--<img class="bd-placeholder-img" width="100%" height="100%" src="../static/img/GRA_L_T.png" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></img>-->
+              
+              <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Seja bem-vindo ao Grandes A(l)titudes!</h1>
+                  <p>Quer entender o que fazemos?</p>
+                  <p><a class="btn btn-lg btn-primary" href="#">Entender</a></p><!-- Redirecionamento para as informações sobre a ONG -->
+                </div>
+              </div>
+            </div><!-- FIM Slide/Item 1 -->
+
+            <div class="carousel-item"><!-- Item 2 -->
+              <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Quer ser voluntário?</h1>
+                  <p>Vem fazer parte desse time!</p>
+                  <p><a class="btn btn-lg btn-primary" href="#">Inscrever-se</a></p><!-- Redirecionamento para a área de inscrição Voluntário da ONG -->
+                </div>
+              </div>
+            </div><!-- FIM Slide/Item 2 -->
+
+            <div class="carousel-item active"><!-- Item 3 -->
+              <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+      
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Possui alguma Dúvida?</h1>
+                  <p>Consulte as Dúvidas mais Frequentes!</p>
+                  <p><a class="btn btn-lg btn-primary" href="#">Dúvidas mais Frequentes</a></p>
+                </div>
+              </div>
+            </div><!-- FIM Slide/Item 3 -->
+
+          </div> <!-- FIM DA Barra de Navegação -->
+
+          <!-- botões de Next e Prox "<" ">" --> 
+          <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div> <!-- FIM DOS SLIDES -->
+
+      </div> <!-- DIV QUE DEFINE A CLASSE DO CONTAINER-->
+    </main>
+
+
+
+    <!-- DEPOIMENTOS -->
+    
+    <div class="container marketing">
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="title-depoiments" style = "background-color: #DBCD08; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+        text-align: center; box-shadow: 10px 9px #dfdfdfbd;">
+          <div>
+              <h1 class="title-depoiment mx-auto"style="width: 1000px; margin: 3px 4% 1em; color: black;"> Depoimentos de Estudantes e Voluntários.</h1>
+              <h2 class="card-subtitle mx-auto" style="width: 900px; margin: 0%; line-height: 0.2; color:#818181">Conheça alguns deles!</h2>
+              <br><!-- Pra substituir isso aqui por margim, pra evitar repetir esse tanto de <br>-->
+          </div>
+        </div>
+
+
+        <!-- Eu não consegui fazer um espaçamento digno entre os titulos e os depoimentos em si...-->
+        <div>
+          <br>
+          <br>
+        </div>
+        
+        <div class="col-lg-4" style="background-color:#bdbdbd;background-repeat: no-repeat, no-repeat;">
+          <div>
+            <br><!-- Pra substituir isso aqui por margim, pra evitar repetir esse tanto de <br>-->
+            <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+            <img src="../img/depfoto1.png" class="bd-placeholder-img rounded-circle" width="140" height="140">
+            <div style="background-color:#ffffff;background-repeat: no-repeat, no-repeat;">
+              <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Mariana Ballerin</h2>
+              <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Cursando Análise e Desenvolvimento de Sistemas na UNICAMP</p>
+              <p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Conheci a Ong em 2018, atráves do instagram. Na época estava prestes a prestar o vestibular, e os materiais disponibilizados me ajudaram demais em meu cronograma de estudos, os mesmos são MARAVILHOSOS!</p>
+            </div>
+          </div>
+        </div><!-- /.col-lg-4 -->
+        
+        <div class="col-lg-4" style="background-color:#bdbdbd;background-repeat: no-repeat, no-repeat;">
+          <div>
+            <br>
+            <!--<svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>-->
+            <img src="../img/depfoto2.png" class="bd-placeholder-img rounded-circle" width="140" height="140">
+            <div style="background-color:#ffffff;background-repeat: no-repeat, no-repeat;">
+              <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Helena Florença</h2>
+              <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Cursando Engenharia da computação na UFF</p>
+              <p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">O mérito do meu ingresso na UFF,dedico totalmente a essa ONG maravilhosa. Hoje estou fazendo Engenharia da computação, mas conheci a ONG quando tinha apenas 18 anos. Os resumos são incíveis, altamente detalhados e completos! Muito obrigada! </p>
+            </div>
+          </div>
+          <p><a class="btn" style ="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; background-color: #DAE74E;" href="depoiments">Veja mais depoimentos</a></p>
+        </div><!-- /.col-lg-4 -->
+        
+        <div class="col-lg-4" style="background-color:#bdbdbd;background-repeat: no-repeat, no-repeat;">
+            <div>
+              <br>
+              <!--<svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>-->
+              <img src="../img/depfoto3.png" class="bd-placeholder-img rounded-circle" width="140" height="140">
+              <div style="background-color:#ffffff;background-repeat: no-repeat, no-repeat;">
+                <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Julio Azevedo</h2>
+                <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Cursando Direito na UFRJ</p>
+                <p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Conheci o instagram da Ong atráves de amigos meus, em 2019, desde então minha vida mudou completamente! realizei o meu sonho de fazer direito em uma iniversidade renomada no país. Gratidão e felicidade ao lembrar da Grandes A(l)titudes!</p>
+              </div>
+            </div>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+      
+      <!--footer start-->
+      <div class="container mt-auto main_blue_color">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top main_blue_color">
+          <div class="col-md-4 d-flex align-items-center ps-4">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+              <!--colocar a logo da ong-->
+              <a class="text-muted" href="#"><i class="fa-brands fa-instagram fa-2x"></i>
+            </a>
+            <span class="text-muted fs-3 ps-1">Grandes Altitudes</span>
+          </div>
+
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex pe-5">
+            <li class="ms-3"><a class="text-muted" href="https://www.youtube.com/channel/UCaTf49HZzLhWikOMC9ofm4A"><i class="fa-brands fa-youtube fa-3x"></i></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-tiktok fa-3x"></i></a></li>
+            <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/grandes_altitudes/"><i class="fa-brands fa-instagram fa-3x"></i></a></li>
+          </ul>
+
+        </footer>
+      </div>
     </div>
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex pe-5">
-      <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-youtube fa-2x"></i></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-tiktok fa-2x"></i></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
-    </ul>
-  </footer>
-</div>
-<!--footer end-->
-</body>
-<!--body end-->
+    <!--footer end-->
+  </body>
 </html>
