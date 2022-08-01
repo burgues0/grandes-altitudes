@@ -19,8 +19,9 @@
 <!--navbar start-->
 <header class="primary-header">
   <img class="ong_logo" src="{% static '../static/img/grandes-altitudes-logo.png'%}" alt="logo">
+  <button class="mobile-nav-toggle" aria-controls="nav_links" aria-expanded="false"><span class="sr-only navbar-toggler-icon">Menu</span></button>
   <nav>
-    <ul id="nav_links" class="nav_links">
+    <ul id="nav_links" data-visible="false" class="nav_links flex">
       <li><a href="/" target="_blank">Home</a></li>
       <li><a href="/" target="_blank">Matérias</a></li>
       <li><a href="/" target="_blank">Doações</a></li>
@@ -105,3 +106,4 @@
 </body>
 <!--body end-->
 </html>
+<script src="{% static '../static/js/sudo_script.js' %}"></script>
