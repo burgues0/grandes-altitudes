@@ -15,7 +15,10 @@ standard blue
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 .primary-header {
@@ -40,6 +43,7 @@ header > * {
 }
 
 .nav_links {
+    display: flex;
     list-style: none;
 }
 
@@ -61,6 +65,10 @@ ul.nav_links {
     margin: 0 0 0 0;
 }
 
+.mobile-nav-toggle {
+    display: none;
+}
+
 a.redir_signup button{
     padding: 0.5625rem 1.5625rem;
     background-color: rgba(0, 136, 169, 1);
@@ -77,10 +85,27 @@ a.redir_signup button:hover {
 @media (max-width: 65em) {
     .nav_links{
         position: fixed;
+        z-index: 1000;
         inset: 0 0 0 30%;
+        padding: min(30vh, 10rem) 2rem;
         flex-direction: column;
+        transform: translateX(100%);
+        background-color: rgba(115, 206, 227, 0.8);
+    }
+    
+    .nav_links[data-visible="true"]{
+        transform: translateX(0%);
+    }
 
-        background: red;
+    .mobile-nav-toggle{
+        position: absolute;
+        display: block;
+        z-index: 9999;
+        /*background: url("/static/img/bars-solid.svg"); aqui, era pra pegar do arquivo, mas nao ta pegando ent to priorizando funcionalidade, dps faço*/
+        width: 3rem;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
     }
 }
 
@@ -95,7 +120,7 @@ a:hover { text-decoration: none; }
 a:active { text-decoration: none; }
 
 .main_blue_color{
-    background-color: #73CEE3;
+    background-color: #73cee3;
 }
 
 .login_btn_color{
@@ -103,7 +128,7 @@ a:active { text-decoration: none; }
 }
 
 .carousel {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     font-size: 10px;
 }
