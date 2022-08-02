@@ -19,6 +19,12 @@ standard blue
 
 body {
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
 }
 
 .primary-header {
@@ -82,10 +88,16 @@ a.redir_signup button:hover {
     background-color: rgba(0, 136, 169, 0.8);
 }
 
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+}
+
 @media (max-width: 63em) {
     .nav_links{
         position: fixed;
         z-index: 1000;
+        /*inset o ultimo muda o tamanho da area definida pra essa parte, x% longe do canto esquerdo da pagina*/
         inset: 0 0 0 30%;
         padding: min(30vh, 10rem) 2rem;
         flex-direction: column;
@@ -102,9 +114,9 @@ a.redir_signup button:hover {
         position: fixed;
         z-index: 1000;
         inset: 130px 0 0 30%;
-        padding: min(30vh, 10rem) 3rem;
+        margin: min(30vh, 10rem) 3rem;
         flex-direction: column;
-        transform: translateX(100%);
+        transform: translateX(120%);
         transition: transform 250ms ease-out;
     }
 

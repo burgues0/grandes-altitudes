@@ -21,14 +21,14 @@
   <img class="ong_logo" src="{% static '../static/img/grandes-altitudes-logo.png'%}" alt="logo">
   <button class="mobile-nav-toggle" aria-controls="nav_links" aria-expanded="false"><span class="sr-only">Menu</span></button>
   <nav>
-    <ul id="nav_links" data-visible="false" class="nav_links flex">
+    <ul id="nav_links resize-animation-stopper" data-visible="false" class="nav_links flex">
       <li><a href="/" target="_blank">Home</a></li>
       <li><a href="/" target="_blank">Matérias</a></li>
       <li><a href="/" target="_blank">Doações</a></li>
       <li><a href="/" target="_blank">Depoimentos</a></li>
     </ul>
   </nav>
-  <a class="redir_signup" data-visible="false" href="/signup"><button class="signup_button">Sign-up</button></a>
+  <a class="redir_signup resize-animation-stopper" data-visible="false" href="/signup"><button class="signup_button">Sign-up</button></a>
 </header>
 <!--navbar end-->
 <!--page content start-->
@@ -86,22 +86,20 @@
 </main>
 <!--page content end-->
 <!--footer start-->
-<div class="container mt-auto main_blue_color">
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top main_blue_color">
-    <div class="col-md-4 d-flex align-items-center ps-4">
-      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-        <!--colocar a logo da ong-->
-        <a class="text-muted" href="#"><i class="fa-brands fa-instagram fa-2x"></i>
-      </a>
-      <span class="text-muted fs-3 ps-1">Grandes Altitudes</span>
-    </div>
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex pe-5">
-      <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-youtube fa-2x"></i></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-tiktok fa-2x"></i></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
-    </ul>
-  </footer>
-</div>
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top main_blue_color">
+  <div class="col-md-4 d-flex align-items-center ps-4">
+    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+      <!--colocar a logo da ong-->
+      <a class="text-muted" href="#"><i class="fa-brands fa-instagram fa-2x"></i>
+    </a>
+    <span class="text-muted fs-3 ps-1">Grandes Altitudes</span>
+  </div>
+  <ul class="nav col-md-4 justify-content-end list-unstyled d-flex pe-5">
+    <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-youtube fa-2x"></i></a></li>
+    <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-tiktok fa-2x"></i></a></li>
+    <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+  </ul>
+</footer>
 <!--footer end-->
 </body>
 <!--body end-->
