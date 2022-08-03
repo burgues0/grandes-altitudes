@@ -116,7 +116,7 @@ a.redir_signup button:hover {
         inset: 130px 0 0 30%;
         margin: min(30vh, 10rem) 3rem;
         flex-direction: column;
-        transform: translateX(120%);
+        transform: translateX(300%);
         transition: transform 250ms ease-out;
     }
 
