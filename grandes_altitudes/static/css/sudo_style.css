@@ -19,6 +19,7 @@ standard blue
 
 body {
     overflow-x: hidden;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -27,7 +28,14 @@ footer {
     margin-top: auto;
 }
 
+.main-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+
 .primary-header {
+    min-height: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,6 +49,7 @@ header > * {
     font-size: 20px;
     color: #EDF0F1;
     text-decoration: none;
+    
 }
 
 .ong_logo {
@@ -116,7 +125,7 @@ a.redir_signup button:hover {
         inset: 130px 0 0 30%;
         margin: min(30vh, 10rem) 3rem;
         flex-direction: column;
-        transform: translateX(300%);
+        transform: translateX(200%);
         transition: transform 250ms ease-out;
     }
 
@@ -133,6 +142,7 @@ a.redir_signup button:hover {
         aspect-ratio: 1;
         top: 2rem;
         right: 2rem;
+        bottom: 2rem
     }
 }
 
