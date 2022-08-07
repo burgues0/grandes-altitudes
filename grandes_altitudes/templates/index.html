@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grandes Altitudes</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/06b6347210.js" crossorigin="anonymous"></script>
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/06b6347210.js" crossorigin="anonymous"></script>
+    <script defer src="{% static '../static/js/sudo_script.js' %}"></script>
     <link href="{% static '../static/css/sudo_style.css' %}" rel="stylesheet">
     <link href="{% static '../static/css/bstrap-css/carousel.css' %}" rel="stylesheet">
     <link href="{% static '../static/css/bstrap-css/carousel.rtl.css' %}" rel="stylesheet">
@@ -32,7 +33,7 @@
 </header>
 <!--navbar end-->
 <!--page content start-->
-<main class="main-flex">
+<main class="main-flex main_bg_color">
   <!--carousel slide start-->
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -85,55 +86,104 @@
     </button>
   </div>
   <!--carousel slide end-->
-  <!--carousel icons start-->
+  <!--features start-->
   <div class="container marketing">
-
     <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="container marketing mx-auto pb-5 pt-2 mb-5" style = "background-color: #DBCD08; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-      text-align: center; box-shadow: 12px 12px #dfdfdfbd;">
-        <div>
-          <h1 class="title-depoiment mx-auto"style="width: 1000px; margin: 3px 4% 1em; color: black;"> 
-            Depoimentos de Estudantes e Voluntários.
-          </h1>
-          <h2 class="card-subtitle mx-auto" style="width: 900px; margin: 0%; line-height: 0.2; color:#818181">
-            Conheça alguns deles!
-          </h2>
-        </div>
+    <hr class="featurette-divider">
+    <!--feature 1-->
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It`ll blow your mind.</span></h2>
+        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
       </div>
-      
-      <!--aqui teoricamente entraria os codigos com o for passando pelas ultimas 3 reviews que estão sendo passadas no views.index, para substituir esses 3 placeholder-->
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
 
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2>Lorem Ipsum</h2>
-        <p>Dolor sit amet</p>
-        <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2>Lorem Ipsum</h2>
-        <p>Dolor sit amet</p>
-        <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2>Lorem Ipsum</h2>
-        <p>Dolor sit amet</p>
-        <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-    <div class="row justify-content-md-center mt-4 mb-2">
-      <div class="col-lg-4">
-        <a href="/reviews"><h2>Veja mais depoimentos!</h2></a>
       </div>
     </div>
-    <!-- /END THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+    <!--feature 2-->
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <!--feature 3-->
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
   </div><!-- /.container -->
-  <div class="container py-3 mt-3 mb-5" style="background-color: blue;">
+
+  <!--faq begin-->
+  <div class="container mb-3">
+    <h3 class="text-center mb-4 pb-2 text-primary fw-bold">Perguntas Frequentes</h3>
+    <p class="text-center mb-5">
+      Find the answers for the most frequently asked questions below
+    </p>
+  
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h6 class="mb-3 text-primary"><i class="far fa-paper-plane text-primary pe-2"></i> A simple question?</h6>
+        <p>
+          <strong><u>Absolutely!</u></strong> We work with top payment companies which guarantees your safety and security. All billing information is stored on our payment processing partner.
+        </p>
+      </div>
+  
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h6 class="mb-3 text-primary"><i class="fas fa-pen-alt text-primary pe-2"></i> A question that is longer then the previous one?</h6>
+        <p>
+          <strong><u>Yes, it is possible!</u></strong> You can cancel your subscription anytime in your account. Once the subscription is cancelled, you will not be charged next month.
+        </p>
+      </div>
+  
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h6 class="mb-3 text-primary"><i class="fas fa-user text-primary pe-2"></i> A simple question?</h6>
+        <p>
+          Currently, we only offer monthly subscription. You can upgrade or cancel your monthly account at any time with no further obligation.
+        </p>
+      </div>
+  
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h6 class="mb-3 text-primary"><i class="fas fa-rocket text-primary pe-2"></i> A simple question?</h6>
+        <p>
+          Yes. Go to the billing section of your dashboard and update your payment information.
+        </p>
+      </div>
+  
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h6 class="mb-3 text-primary"><i class="fas fa-home text-primary pe-2"></i> A simple question?</h6>
+        <p><strong><u>Unfortunately no</u>.</strong> We do not issue full or partial refunds for any reason.</p>
+      </div>
+  
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h6 class="mb-3 text-primary"><i class="fas fa-book-open text-primary pe-2"></i> Another question that is longer than usual</h6>
+        <p>
+          Of course! We’re happy to offer a free plan to anyone who wants to try our service.
+        </p>
+      </div>
+    </div>
+  </div>
+<!--faq end-->
+<!--volunteer anchor area-->
+  <div class="container py-3 mt-3 mb-5" style="background-color: rgba(115, 206, 227, 0.4)">
     <div class="row">
       <div class="col-lg-6 offset-lg-1 pt-2">
         <h2>VENHA SER UM VOLUNTÁRIO!</h2>
@@ -147,6 +197,7 @@
       </div>
     </div>
   </div>
+<!--volunteer anchor area-->
 </main>
 <!--page content end-->
 <!--footer start-->
@@ -168,4 +219,3 @@
 </body>
 <!--body end-->
 </html>
-<script src="{% static '../static/js/sudo_script.js' %}"></script>
