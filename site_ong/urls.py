@@ -5,9 +5,8 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("signup", views.signup, name="signup"),
     path("login", views.login, name="login"),
-    # path("materias", views.materias, name="materias"),
-    # path("signup", views.signup, name="signup"),
-    # path("signup", views.signup, name="signup"),
-    # path("signup", views.signup, name="signup"),
-    # path("signup", views.signup, name="signup"),
+    path("about", views.about, name="about"),
+    path("subjects", views.subjects, name="subjects"),
+    path("donate", views.donate, name="donate"),
+    path("reviews", views.reviews, name="reviews"),
 ]

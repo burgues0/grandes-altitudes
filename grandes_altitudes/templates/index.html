@@ -18,14 +18,14 @@
 <body class="h-100 p-0">
 <!--navbar start-->
 <header class="primary-header">
-  <img class="ong_logo" src="{% static '../static/img/grandes-altitudes-logo.png'%}" alt="logo">
+  <a href="/index"><img class="ong_logo" src="{% static '../static/img/grandes-altitudes-logo.png'%}" alt="logo"></a>
   <button class="mobile-nav-toggle" aria-controls="nav_links" aria-expanded="false"><span class="sr-only">Menu</span></button>
   <nav>
     <ul id="nav_links resize-animation-stopper" data-visible="false" class="nav_links flex">
-      <li><a href="/">Home</a></li>
-      <li><a href="/">Matérias</a></li>
-      <li><a href="/">Doações</a></li>
-      <li><a href="/">Depoimentos</a></li>
+      <li><a href="/about">Quem Somos</a></li>
+      <li><a href="/subjects">Matérias</a></li>
+      <li><a href="/donate">Doações</a></li>
+      <li><a href="/reviews">Depoimentos</a></li>
     </ul>
   </nav>
   <a class="redir_signup resize-animation-stopper" data-visible="false" href="/signup"><button class="signup_button">Sign-up</button></a>
@@ -90,7 +90,6 @@
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
-
       <div class="container marketing mx-auto pb-5 pt-2 mb-5" style = "background-color: #DBCD08; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
       text-align: center; box-shadow: 12px 12px #dfdfdfbd;">
         <div>
@@ -127,6 +126,11 @@
         <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
+    <div class="row justify-content-md-center my-2">
+      <div class="col-lg-4">
+        <a><h2>Veja mais depoimentos!</h2></a>
+      </div>
+    </div>
     <!-- /END THE FEATURETTES -->
   </div><!-- /.container -->
 </main>
