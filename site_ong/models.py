@@ -1,3 +1,4 @@
+from datetime import date
 from django.db import models
 
 class UserLogin(models.Model):
@@ -30,3 +31,4 @@ class Reviews(models.Model):
     id_review = models.AutoField(auto_created=True, primary_key=True, default=1)
     user_login = models.ForeignKey(UserLogin, on_delete=models.CASCADE)
     reviewText = models.CharField(max_length=800)
+    date_add = models.DateField(default=date.today)
