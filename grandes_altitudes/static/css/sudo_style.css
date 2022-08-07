@@ -22,6 +22,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #FAF26B;
 }
 
 footer {
@@ -163,6 +164,10 @@ a:active { text-decoration: none; }
 
 .main_blue_color{
     background-color: #73cee3;
+}
+
+.main_bg_color{
+    background-color: #F7F7D5;
 }
 
 .login_btn_color{
