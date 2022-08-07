@@ -28,6 +28,11 @@ footer {
     margin-top: auto;
 }
 
+img {
+    height: auto;
+    max-width: 100%;
+}
+
 .main-flex {
     display: flex;
     flex-direction: column;
