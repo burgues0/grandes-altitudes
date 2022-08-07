@@ -13,3 +13,15 @@ def signup(request):
 
 def login(request):
     pass
+
+def about(request):
+    return render(request, "about.html")
+
+def subjects(request):
+    return render(request, "subjects.html")
+
+def donate(request):
+    return render(request, "donate.html")
+
+def reviews(request):
+    return render(request, "reviews.html")
