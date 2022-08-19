@@ -1,32 +1,173 @@
 /* caso a gente queira colocar algum css especifico para sobescrever o do bootstrap */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+/*
+1px = 0,0625rem
+
+standard blue
+#73CEE3
+
+
+*/
+
+/* begin navbar css */
+
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
 }
 
-li, a, button {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    color: #edf0f1;
-    text-decoration: none;
+body {
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #FAF26B;
 }
 
-header {
+footer {
+    margin-top: auto;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.main-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.primary-header {
+    min-height: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
+    background-color: #73CEE3;
+}
+
+header > * {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #EDF0F1;
+    text-decoration: none;
+    
 }
 
 .ong_logo {
     cursor: pointer;
+    width: 5%;
 }
 
+.nav_links {
+    display: flex;
+    list-style: none;
+}
+
+.nav_links > li {
+    display: inline-block;
+    padding: 0rem 1.25rem;
+}
+
+.nav_links > li > a {
+    color: #EDF0F1;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links > li > a:hover {
+    color: #0088a9;
+}
+
+ul.nav_links {
+    margin: 0 0 0 0;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+a.redir_signup button{
+    padding: 0.5625rem 1.5625rem;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+a.redir_signup button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+}
+
+@media (max-width: 63em) {
+    .nav_links{
+        position: fixed;
+        z-index: 1000;
+        /*inset o ultimo muda o tamanho da area definida pra essa parte, x% longe do canto esquerdo da pagina*/
+        inset: 0 0 0 30%;
+        padding: min(30vh, 10rem) 2rem;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 250ms ease-out;
+        background-color: rgba(115, 206, 227, 0.8);
+    }
+    
+    .nav_links[data-visible="true"]{
+        transform: translateX(0%);
+    }
+
+    .redir_signup{
+        position: fixed;
+        z-index: 1000;
+        inset: 130px 0 0 30%;
+        margin: min(30vh, 10rem) 3rem;
+        flex-direction: column;
+        transform: translateX(200%);
+        transition: transform 250ms ease-out;
+    }
+
+    .redir_signup[data-visible="true"]{
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle{
+        position: absolute;
+        display: block;
+        z-index: 9999;
+        /*background: url("/static/img/bars-solid.svg"); aqui, era pra pegar do arquivo, mas nao ta pegando ent to priorizando funcionalidade, dps faço*/
+        width: 3rem;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+        bottom: 2rem
+    }
+}
+
+/*end navbar css*/
+
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; }
+
 .main_blue_color{
-    background-color: #73CEE3;
+    background-color: #73cee3;
+}
+
+.main_bg_color{
+    background-color: #F7F7D5;
 }
 
 .login_btn_color{
@@ -34,7 +175,7 @@ header {
 }
 
 .carousel {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     font-size: 10px;
 }
