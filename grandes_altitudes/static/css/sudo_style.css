@@ -29,6 +29,12 @@ header {
     background-color: #73CEE3;
 }
 
+.subjects_yellow_color{
+    background-color: #f7f7d5;
+}
+.subjects_container_color{
+    background-color: #e9e8e8;
+}
 .login_btn_color{
     background-color: #445EEB;
 }

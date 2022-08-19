@@ -20,4 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("site_ong.urls")),
     path("signup/", include("site_ong.urls")),
+    path("donate/", include("site_ong.urls")),
+    path("subjects/", include("site_ong.urls")),
 ]
