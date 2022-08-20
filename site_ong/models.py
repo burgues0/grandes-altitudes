@@ -32,3 +32,29 @@ class Reviews(models.Model):
     user_login = models.ForeignKey(UserLogin, on_delete=models.CASCADE)
     reviewText = models.CharField(max_length=800)
     date_add = models.DateField(default=date.today)
+
+    """ # Uma ideia pra tentar automatizar a questão dos depoimentos.
+class Depoimento: #isso deve haver em models.py
+        name: str
+        formation: str
+        details: str
+        is_true: bool
+
+
+    depoimento1 = depoiment()
+    depoimento1.name = 'Julio Vasconcelos'
+    depoimento1.formação = 'UFRJ'
+    depoimento1.details = 'GRATA A ONG....'
+    ...
+    depoimento2 = depoiment()
+    depoimento3 = depoiment()
+    
+
+    depoiments = [depoimento1, depoimento2, depoimento3]
+
+    #in page of depoiments
+    {% for depoiment in depoiments %} 
+        {{depoimento.name}}
+        {{depoimento1.formação = 'UFRJ'}}
+        {{depoimento.details}}
+    {% end for %} """
