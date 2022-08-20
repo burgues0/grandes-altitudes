@@ -1,4 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block statics %}
+<link href="{% static '../static/css/bstrap-css/carousel.css' %}" rel="stylesheet">
+{% endblock %}
 {% block content %}
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">

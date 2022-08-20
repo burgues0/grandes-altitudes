@@ -179,3 +179,10 @@ a:active { text-decoration: none; }
     height: 100%;
     font-size: 10px;
 }
+
+.rounded-img{
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+}
