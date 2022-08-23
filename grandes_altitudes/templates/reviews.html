@@ -1,8 +1,109 @@
-<!--pagina de depoimentos
-    checar pendencias com o vitin dessa pagina
-    na hora de fazer o merge
-    e juntar tudo
--->
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}Depoimentos{% endblock %}
-{% block content %}{% endblock %}
+{% block statics %}
+<link href="{% static '../static/css/bstrap-css/carousel.css' %}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+<div class="container marketing">
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="container marketing mx-auto pt-4 pb-5 my-5" style = "background-color: #DBCD08; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+        text-align: center; box-shadow: 12px 12px #dfdfdfbd;">
+            <div>
+            <h1 class="title-depoiment mx-auto"style="width: 1000px; margin: 3px 4% 1em; color: black;"> 
+            Depoimentos de Estudantes e Voluntários.
+            </h1>
+            <h2 class="card-subtitle mx-auto" style="width: 900px; margin: 0%; line-height: 0.2; color:#818181">
+            Conheça alguns deles!
+            </h2>
+            </div>
+        </div>
+
+        <div class="col-lg-4 d-flex flex-wrap justify-content-between align-items-center" style="background-color:#bdbdbd;background-repeat: no-repeat, no-repeat;">
+            <div><!-- DEPOIMENTO 1 -->
+            <img src="{% static '../static/img/depfoto1.png'%}" class="bd-placeholder-img rounded-img my-2" width="140" height="140">
+                <div style="background-color:#ffffff;background-repeat: no-repeat, no-repeat; border-radius: 5px;">
+                <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Mariana Ballerin</h2>
+                <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Cursando Análise e Desenvolvimento de Sistemas na UNICAMP</p>
+                <p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Conheci a Ong em 2018, atráves do instagram. Na época estava prestes a prestar o vestibular, e os materiais disponibilizados me ajudaram demais em meu cronograma de estudos, os mesmos são MARAVILHOSOS!</p>
+                </div>
+            </div>
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4 d-flex flex-wrap justify-content-between align-items-center" style="background-color:#bdbdbd;background-repeat: no-repeat, no-repeat;">
+            <div><!-- DEPOIMENTO 2 -->
+            <img src="{% static '../static/img/depfoto2.png'%}" class="bd-placeholder-img rounded-img my-2" width="140" height="140">
+                <div style="background-color:#ffffff;background-repeat: no-repeat, no-repeat; border-radius: 5px;">
+                <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Helena Florença</h2>
+                <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Cursando Engenharia da computação na UFF</p>
+                <p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">O mérito do meu ingresso na UFF,dedico totalmente a essa ONG maravilhosa. Hoje estou fazendo Engenharia da computação, mas conheci a ONG quando tinha apenas 18 anos. Os resumos são incíveis, altamente detalhados e completos! Muito obrigada! </p>
+                </div>
+            </div>
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4 d-flex flex-wrap justify-content-between align-items-center" style="background-color:#bdbdbd;background-repeat: no-repeat, no-repeat;">
+            <div><!-- DEPOIMENTO 3 -->
+            <img src="{% static '../static/img/depfoto3.png'%}" class="bd-placeholder-img rounded-img my-2" width="140" height="140">
+                <div style="background-color:#ffffff;background-repeat: no-repeat, no-repeat; border-radius: 5px;">
+                <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Julio Azevedo</h2>
+                <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Cursando Direito na UFRJ</p>
+                <p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Conheci o instagram da Ong atráves de amigos meus, em 2019, desde então minha vida mudou completamente! realizei o meu sonho de fazer direito em uma iniversidade renomada no país. Gratidão e felicidade ao lembrar da Grandes A(l)titudes!</p>
+                </div>
+            </div>
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4 d-flex flex-wrap justify-content-between align-items-center" style="background-color:#bdbdbd;background-repeat: no-repeat, no-repeat;">
+            <div><!-- DEPOIMENTO 4 -->
+            <img src="{% static '../static/img/depfoto4.png'%}" class="bd-placeholder-img rounded-img my-2" width="140" height="140">
+                <div style="background-color:#ffffff;background-repeat: no-repeat, no-repeat; border-radius: 5px;">
+                <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Anderson Martins</h2>
+                <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Cursando Biomedicina na UFG</p>
+                <p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Esse projeto foi essencial na minha nota, principalmente em redação. Muito grato! Nos anos em que acompanhei, a partir de 2018, comecei a apreciar o trabalho de organizações voluntárias como essa. Depois de me formar planejo trabalhar com esses projetos para ajudar pessoas como eu e também voluntariar.</p>
+                </div>
+            </div>
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4 d-flex flex-wrap justify-content-between align-items-center" style="background-color:#bdbdbd;background-repeat: no-repeat, no-repeat;">
+            <div><!-- DEPOIMENTO 5 -->
+            <img src="{% static '../static/img/depfoto5.png'%}" class="bd-placeholder-img rounded-img my-2" width="140" height="140">
+                <div style="background-color:#ffffff;background-repeat: no-repeat, no-repeat; border-radius: 5px;">
+                <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Brunno Almeida</h2>
+                <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Cursando Engenharia Cívil na UFRGS</p>
+                <p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Me recomendaram os resumos de uma amiga que trabalhava na ONG, e comecei a acompanhar o projeto nas redes sociais, em 2019. Virou uma parte da minha rotina de estudos, até passar em engenharia cívil em 2020. O material de graça, ajudou muito na minha situação. Gratidão total a ONG!</p>
+                </div>
+            </div>
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4 d-flex flex-wrap justify-content-between align-items-center" style="background-color:#bdbdbd;background-repeat: no-repeat, no-repeat;"> <!-- DEPOIMENTO 6 -->
+            <div><!-- DEPOIMENTO 6 -->
+            <img src="{% static '../static/img/depfoto6.png'%}" class="bd-placeholder-img rounded-img my-2" width="140" height="140">
+                <div style="background-color:#ffffff;background-repeat: no-repeat, no-repeat; border-radius: 5px;">
+                <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Carlos da Silva</h2>
+                <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Cursando Direito na USP</p>
+                <p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Esse projeto foi essencial na minha nota, principalmente em redação. Muito grato! Nos anos em que acompanhei, a partir de 2018, comecei a apreciar o trabalho de organizações voluntárias como essa. Depois de me formar planejo trabalhar com esses projetos para ajudar pessoas como eu e também voluntariar.</p>
+                </div>
+            </div>
+        </div><!-- /.col-lg-4 -->
+
+    </div><!-- /.row -->
+
+    <div class="flex flex-col justify-center container mx-auto py-10 px-10">
+        <div class="flex justify-between">
+            <button class="text-gray-600 text-base hover:text-blue-700 leading-4 bg-white shadow-md drop-shadow rounded py-5 px-6 font-medium flex items-center">
+            <svg width="8" height="12" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="ml-4">Anterior</span>
+            </button>
+
+            <button class="text-gray-600 text-base leading-4 hover:text-blue-700 bg-white shadow-md drop-shadow rounded py-5 px-6 items-right">
+            <span class="mr-4">Próximo</span>
+            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 13L7 7L1 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}
