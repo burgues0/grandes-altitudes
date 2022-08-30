@@ -23,7 +23,7 @@ class Materials(models.Model):
     subject = models.CharField(max_length=50)
     content = models.CharField(max_length=50)
     format = models.CharField(max_length=20)
-    done_by = models.CharField(max_length=50)
+    author = models.CharField(max_length=50)
 
 class Reviews(models.Model):
     # nao tenho ctz dessa organização, mas imagino que um depoimento esteja atrelado a uma conta no site, correto?
