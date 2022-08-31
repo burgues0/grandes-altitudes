@@ -1,9 +1,10 @@
-from datetime import date
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.contrib.auth import login, logout, authenticate
 from .models import *
-import pyrebase
+from .forms import RegisterForm
 from decouple import config
+import pyrebase
 
 fbConfig = {
     "apiKey": config("API_KEY"),
@@ -24,10 +25,41 @@ def index(request):
     last_three_reviews = Reviews.objects.all().order_by('id_review').reverse()[:3]
     return render(request, "index.html", {"reviews" : last_three_reviews})
 
+#cadastro de usuarios
 def signup(request):
-    return render(request, "signup.html")
+    #caso o metodo seja post, o formulario foi enviado
+    if(request.method == "POST"):
+        #salva os valores do form em variaveis
+        userEmail = request.POST["email"]
+        userPassword = request.POST["password"]
+        passwordConf = request.POST["password-confirm"]
+        #checa pra ver se a senha e a mesma da confirmação
+        if(userPassword == passwordConf):
+            #checa na base de dados caso o email recebido no form já existe, se sim redireciona de volta para a pagina
+            if(UserCredentials.objects.filter(email=userEmail).exists()):
+                messages.info(request, "Email já foi utilizado.")
+                return redirect("signup")
+            #caso o username e o email sejam novos, ele cria o usuario, salva no BD e redireciona pra pagina de login
+            else:
+                firebaseUser = auth.create_user_with_email_and_password(userEmail, userPassword)
+                mainDatabaseUser = UserCredentials.objects.create(email=userEmail, password=userPassword)
+                mainDatabaseUser.save()
+                return redirect("login")
+        else:
+            messages.info(request, "As senhas não batem.")
+            return redirect("signup")
+    else:
+        return render(request, "signup.html", {'messages': messages})
 
-def login(request):
+#login dos usuarios
+def signin(request):
+    if(request.method == "POST"):
+        userEmail = request.POST["email"]
+        userPassword = request.POST["password"]
+        try:
+            firebaseUser = auth.sign_in_with_email_and_password(userEmail, userPassword)
+        except:
+            messages.info(request, "Credenciais inválidas.")
     pass
 
 def about(request):
@@ -41,3 +73,12 @@ def donate(request):
 
 def reviews(request):
     return render(request, "reviews.html")
+
+    # if(request.method == "POST"):
+    #     form = RegisterForm(request.POST)
+    #     if(form.is_valid()):
+    #         user = form.save()
+    #         login(request, user)
+    #         return redirect('/index')
+    # else:
+    #     form = RegisterForm()

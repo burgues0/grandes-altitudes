@@ -1,7 +1,7 @@
 from datetime import date
 from django.db import models
 
-class UserLogin(models.Model):
+class UserCredentials(models.Model):
     email = models.CharField(max_length=50, primary_key=True)
     password = models.CharField(max_length=500)
     # profile_pic = models.FileField()
@@ -9,12 +9,12 @@ class UserLogin(models.Model):
     occupation = models.CharField(max_length=30)
 
 class Coordinator(models.Model):
-    user_login = models.OneToOneField(UserLogin, on_delete=models.CASCADE, primary_key=True)
+    user_login = models.OneToOneField(UserCredentials, on_delete=models.CASCADE, primary_key=True)
     name = models.CharField(max_length=50)
     phone_number = models.CharField(max_length=12)
 
 class Volunteer(models.Model):
-    user_login = models.OneToOneField(UserLogin, on_delete=models.CASCADE, primary_key=True)
+    user_login = models.OneToOneField(UserCredentials, on_delete=models.CASCADE, primary_key=True)
     name = models.CharField(max_length=50)
     phone_number = models.CharField(max_length=12)
 
@@ -29,7 +29,7 @@ class Reviews(models.Model):
     # nao tenho ctz dessa organização, mas imagino que um depoimento esteja atrelado a uma conta no site, correto?
     # caso a gente coloque tudo na mão, puxando imagem e perfil do insta ou algo do tipo, avisar por favor
     id_review = models.AutoField(auto_created=True, primary_key=True, default=1)
-    user_login = models.ForeignKey(UserLogin, on_delete=models.CASCADE)
+    user_login = models.ForeignKey(UserCredentials, on_delete=models.CASCADE)
     reviewText = models.CharField(max_length=800)
     date_add = models.DateField(default=date.today)
 
