@@ -1,8 +1,7 @@
+import os
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.contrib.auth import login, logout, authenticate
 from .models import *
-from .forms import RegisterForm
 from decouple import config
 import pyrebase
 
@@ -13,11 +12,13 @@ fbConfig = {
     "storageBucket": config("STORAGE_BUCKET"),
     "messagingSenderId": config("MESSAGING_SENDER_ID"),
     "appId": config("APP_ID"),
-    "serviceAccount": config("FIREBASE_CREDENTIALS")
+    "serviceAccount": config("FIREBASE_CREDENTIALS"),
+    "databaseURL": os.path.abspath(os.path.dirname(__file__)) + config("FIREBASE_DATABASE_URL")
 }
 
 firebase = pyrebase.initialize_app(fbConfig)
 auth = firebase.auth()
+
 fbDatabase = firebase.database()
 
 # Create your views here.
@@ -44,7 +45,7 @@ def signup(request):
                 firebaseUser = auth.create_user_with_email_and_password(userEmail, userPassword)
                 mainDatabaseUser = UserCredentials.objects.create(email=userEmail, password=userPassword)
                 mainDatabaseUser.save()
-                return redirect("login")
+                return redirect("signin")
         else:
             messages.info(request, "As senhas não batem.")
             return redirect("signup")
@@ -60,7 +61,11 @@ def signin(request):
             firebaseUser = auth.sign_in_with_email_and_password(userEmail, userPassword)
         except:
             messages.info(request, "Credenciais inválidas.")
-    pass
+            return redirect("signin")
+        firebaseUser = auth.refresh(firebaseUser['refreshToken'])
+        return redirect("index", {})
+        
+    return render(request, "signin.html")
 
 def about(request):
     return render(request, "about.html")

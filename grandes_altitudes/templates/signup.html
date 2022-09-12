@@ -19,7 +19,7 @@
         <main class="form-signin main_blue_color px-4 py-4 rounded">
             {% block form %}
             <form method="post" action="signup">
-                {% csrf token %}
+                {% csrf_token %}
                 <h1 class="h3 mb-3 fw-normal">Cadastre-se!</h1>
                 <div class="form-floating">
                     <input type="email" class="form-control" id="floatingInput" placeholder="seu.nome@exemplo.com" name="email">
