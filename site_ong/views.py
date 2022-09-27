@@ -36,6 +36,11 @@ def signup(request):
         passwordConf = request.POST["password-confirm"]
         #checa pra ver se a senha e a mesma da confirmação
         if(userPassword == passwordConf):
+            #!!!
+            #!!!
+            #OBS.: implementar dps uma funcao pra checagem de senha forte, e a comparacao da senha com a confirmacao de senha (pra substituir essa comparacao dentro desse if)
+            #!!!
+            #!!!
             #checa na base de dados caso o email recebido no form já existe, se sim redireciona de volta para a pagina
             if(UserCredentials.objects.filter(email=userEmail).exists()):
                 messages.info(request, "Email já foi utilizado.")
@@ -45,12 +50,12 @@ def signup(request):
                 firebaseUser = auth.create_user_with_email_and_password(userEmail, userPassword)
                 mainDatabaseUser = UserCredentials.objects.create(email=userEmail, password=userPassword)
                 mainDatabaseUser.save()
-                return redirect("signin")
+                return render(request, "signin.html")
         else:
             messages.info(request, "As senhas não batem.")
             return redirect("signup")
     else:
-        return render(request, "signup.html", {'messages': messages})
+        return render(request, "signup.html")
 
 #login dos usuarios
 def signin(request):
@@ -63,7 +68,8 @@ def signin(request):
             messages.info(request, "Credenciais inválidas.")
             return redirect("signin")
         firebaseUser = auth.refresh(firebaseUser['refreshToken'])
-        return redirect("index", {})
+        print(firebaseUser)
+        return redirect("index")
         
     return render(request, "signin.html")
 
