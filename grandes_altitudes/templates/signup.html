@@ -20,6 +20,9 @@
             {% block form %}
             <form method="post" action="signup">
                 {% csrf_token %}
+                {% for message in messages %}
+                <h5 style="color: red;">{{message}}</h5>
+                {% endfor %}
                 <h1 class="h3 mb-3 fw-normal">Cadastre-se!</h1>
                 <div class="form-floating">
                     <input type="email" class="form-control" id="floatingInput" placeholder="seu.nome@exemplo.com" name="email">
@@ -34,7 +37,7 @@
 
                 <button class="w-100 btn btn-lg btn-primary" type="submit">Criar conta!</button>
 
-                <p>Já possui uma conta? <a href="/signin">Faça login!</a></p>
+                <p class="mt-2">Já possui uma conta? <a href="/signin">Faça login!</a></p>
 
                 <h3 class="mt-5 mb-3 text-muted">Grandes Altitudes</h3>
             </form>
