@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Grandes Altitudes{% endblock %}</title>
+    {% block statics %}
+    {% endblock %}
+    <link href="{% static '../static/css/sudo_style.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/06b6347210.js" crossorigin="anonymous"></script>
+    <script defer src="{% static '../static/js/sudo_script.js' %}"></script>
+</head>
+<!--body start-->
+<body class="h-100 p-0 main_bg_color">
+<!--navbar start-->
+<header class="primary-header">
+  <img class="ong_logo" src="{% static '../static/img/grandes-altitudes-logo.png'%}" alt="logo">
+  <button class="mobile-nav-toggle" aria-controls="nav_links" aria-expanded="false"><span class="sr-only">Menu</span></button>
+  <nav>
+    <ul id="nav_links resize-animation-stopper" data-visible="false" class="nav_links flex">
+      <li><a href="/about">Quem Somos</a></li>
+      <li><a href="/subjects">Matérias</a></li>
+      <li><a href="/donate">Doações</a></li>
+      <li><a href="/reviews">Depoimentos</a></li>
+    </ul>
+  </nav>
+  <a class="redir_signup resize-animation-stopper" data-visible="false" href="/signup"><button class="signup_button">Sign-up</button></a>
+</header>
+<!--navbar end-->
+<!--page content start-->
+<main class="main-flex">
+  <!--carousel slide start-->
+  {% block content %}
+  {% endblock %}
+</main>
+<!--page content end-->
+<!--footer start-->
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top main_blue_color">
+  <div class="col-md-4 d-flex align-items-center ps-4">
+    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+      <!--colocar a logo da ong-->
+      <a class="text-muted" href="#"><i class="fa-brands fa-instagram fa-2x"></i>
+    </a>
+    <span class="text-muted fs-3 ps-1">Grandes Altitudes</span>
+  </div>
+  <ul class="nav col-md-4 justify-content-end list-unstyled d-flex pe-5">
+    <li class="ms-3"><a class="text-muted" href="https://www.youtube.com/channel/UCaTf49HZzLhWikOMC9ofm4A"><i class="fa-brands fa-youtube fa-2x"></i></a></li>
+    <li class="ms-3"><a class="text-muted" href="https://www.tiktok.com/@grandes_altitudes"><i class="fa-brands fa-tiktok fa-2x"></i></a></li>
+    <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/grandes_altitudes/"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+  </ul>
+</footer>
+<!--footer end-->
+</body>
+<!--body end-->
+</html>
