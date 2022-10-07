@@ -1,36 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block statics %}
-<link href="{% static '../static/css/bstrap-css/about.css' %}" rel="stylesheet">
+<link href="{% static '../static/css/about.css' %}" rel="stylesheet">
 {% endblock %}
 {% block title %}Quem somos?{% endblock %}
 {% block content %}
-<div class="row justify-content-md-center">
-    <div class="col-md-8 d-flex align-items-center ps-4">
-        <img class ="mx-4" src="{% static '../static/img/logoSemFundov2.png' %}"> 
-        <div class="fs-2 text">
-            <div class="bg-warning p-2 text-dark bg-opacity-50">
-                <b class="text-uppercase">O que é a grandes a(l)titudes?</b>
-            </div>
+<div class="container-md">
+    <br>
+    <div class="p-3 mb-2 bg-warning text-dark bg-opacity-75 rounded-pill">
+        <div class="fs-2">
+            <p class="text-center">
+                <img class="ong_logo" src="{% static '../static/img/grandes-altitudes-logo.png'%}" alt="logo">
+                <b>O QUE É A GRANDES A(L)TITUDES?</b>
+            </p>
         </div>
     </div>
-</div>
-<br>
-<div class="row justify-content-md-center">
-    <div class="col-md-6 d-flex align-items-center">
-        <img src="{% static '../static/img/equipe.jpg' %}" width="650px">
+    <br>
+    <div class="row-center">
+        <div class="d-flex justify-content-center">
+            <img src="{% static '../static/img/equipe-horizontal.webp' %}" class="rounded-3" alt="...">
+        </div>
     </div>
-</div>
-<br>
-<div class="row justify-content-md-center">
-    <div class="col-md-11 d-flex align-items-center ps-4">
-        <p class="lh-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tristique senectus et netus et. Ante in nibh mauris cursus mattis. At tempor commodo ullamcorper a lacus. Cursus euismod quis viverra nibh cras pulvinar. Ullamcorper malesuada proin libero nunc consequat interdum. Aliquam nulla facilisi cras fermentum. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis. Urna cursus eget nunc scelerisque viverra. Euismod quis viverra nibh cras pulvinar mattis. Enim diam vulputate ut pharetra. Dui vivamus arcu felis bibendum. Ut ornare lectus sit amet est. Sit amet venenatis urna cursus eget nunc scelerisque viverra.</p>
-    </div>
-    <div class="col-md-11 d-flex align-items-center ps-4">
-        <p class="lh-1">Consectetur adipiscing elit duis tristique sollicitudin. Tellus integer feugiat scelerisque varius morbi enim. Diam phasellus vestibulum lorem sed risus ultricies tristique. Viverra nibh cras pulvinar mattis nunc sed blandit libero. Sapien pellentesque habitant morbi tristique senectus et netus et malesuada. Augue neque gravida in fermentum et. Sit amet luctus venenatis lectus magna fringilla urna porttitor. Pharetra et ultrices neque ornare aenean euismod elementum nisi quis. Proin sagittis nisl rhoncus mattis rhoncus. Enim tortor at auctor urna nunc id. Mattis nunc sed blandit libero. Elementum pulvinar etiam non quam. Nec ultrices dui sapien eget mi proin sed libero enim. Pharetra diam sit amet nisl suscipit adipiscing.</p>
-    </div>
-    <div class="col-md-11 d-flex align-items-center ps-4">
-        <p class="lh-1">Odio facilisis mauris sit amet. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Tellus cras adipiscing enim eu. Odio pellentesque diam volutpat commodo. Quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Amet nisl suscipit adipiscing bibendum est. Suspendisse potenti nullam ac tortor. A arcu cursus vitae congue mauris rhoncus. Vitae nunc sed velit dignissim sodales ut eu. Cursus vitae congue mauris rhoncus aenean. Ac felis donec et odio pellentesque diam volutpat commodo sed. Pretium viverra suspendisse potenti nullam ac tortor vitae.</p>
-    </div>
+    <br>
 </div>
 {% endblock %}
