@@ -10,13 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-import os
+import os, dj_database_url
 from pathlib import Path
 from decouple import config, Csv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+IS_HEROKU = config("IS_HEROKU", cast=bool)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -24,14 +25,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config("SECRET_KEY")
 
+# if running on heroku, uses heroku's hostname validation, so usage of wildcard (*) is not a problem
+if(IS_HEROKU):
+    ALLOWED_HOSTS = ["*"]
+else:    
+    ALLOWED_HOSTS = config("ALLOWED_HOSTS", cast=Csv())
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config("DEBUG", cast=bool)
-
-ALLOWED_HOSTS = config("ALLOWED_HOSTS", cast=Csv())
-
+if(not IS_HEROKU):
+    DEBUG = config("DEBUG", cast=bool)
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -77,10 +81,7 @@ WSGI_APPLICATION = 'grandes_altitudes.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': config("NAME"),
-    }
+    'default':dj_database_url.config(default=config("DATABASE_URL"))
 }
 
 
@@ -125,6 +126,3 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, config("STATIC_URL")),)
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-LOGIN_REDIRECT_URL = '/index'
-LOGOUT_REDIRECT_URL = '/login'
