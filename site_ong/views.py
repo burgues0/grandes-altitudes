@@ -19,8 +19,8 @@ fbConfig = {
         "private_key": config("PRIVATE_KEY"),
         "client_email": config("CLIENT_EMAIL"),
         "client_id": config("CLIENT_ID"),
-        "auth_uri": config("AUTH_URI"),
-        "token_uri": config("TOKEN_URI"),
+        "auth_uri": config("AUTH_URL"),
+        "token_uri": config("TOKEN_URL"),
         "auth_provider_x509_cert_url": config("AUTH_PROVIDER_x509_CERT_URL"),
         "client_x509_cert_url": config("CLIENT_x509_CERT_URL")
     },
