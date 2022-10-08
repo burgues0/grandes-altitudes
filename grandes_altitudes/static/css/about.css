@@ -1,3 +1,9 @@
-body{
-    background-color: #FAF26B;
+main{
+    background-color: #FAFFA7;
+}
+.container{
+    background-color: #F9F6D5;
+}
+p{
+    font-family: Comic Sans MS;
 }
