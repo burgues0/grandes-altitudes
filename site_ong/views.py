@@ -12,18 +12,7 @@ fbConfig = {
     "storageBucket": config("STORAGE_BUCKET"),
     "messagingSenderId": config("MESSAGING_SENDER_ID"),
     "appId": config("APP_ID"),
-    "serviceAccount": {
-        "type": config("TYPE"),
-        "project_id": config("PROJECT_ID"),
-        "private_key_id": config("PRIVATE_KEY_ID"),
-        "private_key": config("PRIVATE_KEY"),
-        "client_email": config("CLIENT_EMAIL"),
-        "client_id": config("CLIENT_ID"),
-        "auth_uri": config("AUTH_URL"),
-        "token_uri": config("TOKEN_URL"),
-        "auth_provider_x509_cert_url": config("AUTH_PROVIDER_x509_CERT_URL"),
-        "client_x509_cert_url": config("CLIENT_x509_CERT_URL")
-    },
+    "serviceAccount": {config("FIREBASE_JSON")},
     "databaseURL": os.path.abspath(os.path.dirname(__file__)) + config("FIREBASE_DATABASE_URL")
 }
 
