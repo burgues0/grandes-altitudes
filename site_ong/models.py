@@ -28,7 +28,7 @@ class Materials(models.Model):
 class Reviews(models.Model):
     # nao tenho ctz dessa organização, mas imagino que um depoimento esteja atrelado a uma conta no site, correto?
     # caso a gente coloque tudo na mão, puxando imagem e perfil do insta ou algo do tipo, avisar por favor
-    id_review = models.AutoField(auto_created=True, primary_key=True)
+    id_review = models.AutoField(primary_key=True)
     user_login = models.ForeignKey(UserCredentials, on_delete=models.CASCADE)
     reviewText = models.CharField(max_length=800)
     date_add = models.DateField(default=date.today)
