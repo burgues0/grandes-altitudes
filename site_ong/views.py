@@ -19,8 +19,6 @@ fbConfig = {
 firebase = pyrebase.initialize_app(fbConfig)
 auth = firebase.auth()
 
-fbDatabase = firebase.database()
-
 # Create your views here.
 def index(request):
     last_three_reviews = Reviews.objects.all().order_by('id_review').reverse()[:3]
@@ -48,6 +46,8 @@ def signup(request):
             #caso o username e o email sejam novos, ele cria o usuario, salva no BD e redireciona pra pagina de login
             else:
                 firebaseUser = auth.create_user_with_email_and_password(userEmail, userPassword)
+                uid = firebaseUser['localId']
+                idtoken = request.session['uid']
                 mainDatabaseUser = UserCredentials.objects.create(email=userEmail, password=userPassword)
                 mainDatabaseUser.save()
                 return render(request, "signin.html")
@@ -68,9 +68,17 @@ def signin(request):
             messages.info(request, "Credenciais inválidas.")
             return redirect("signin")
         firebaseUser = auth.refresh(firebaseUser['refreshToken'])
+        sessionID = firebaseUser['idToken']
+        request.session['uid'] = str(sessionID)
         print(firebaseUser)
         return redirect("index")
-        
+    return render(request, "signin.html")
+
+def logout(request):
+    try:
+        del request.session['uid']
+    except:
+        pass
     return render(request, "signin.html")
 
 def about(request):

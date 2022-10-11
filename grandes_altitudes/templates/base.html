@@ -19,9 +19,9 @@
 <body class="h-100 p-0 main_bg_color">
 <!--navbar start-->
 <header class="primary-header">
-  <img class="ong_logo" src="{% static '../static/img/grandes-altitudes-logo.png'%}" alt="logo">
+  <a class="anchor_logo" href="/"><img class="ong_logo" src="{% static '../static/img/grandes-altitudes-logo.png'%}" alt="logo"></a>
   <button class="mobile-nav-toggle" aria-controls="nav_links" aria-expanded="false"><span class="sr-only">Menu</span></button>
-  <nav>
+  <nav class="nav_flex">
     <ul id="nav_links resize-animation-stopper" data-visible="false" class="nav_links flex">
       <li><a href="/about">Quem Somos</a></li>
       <li><a href="/subjects">Matérias</a></li>
@@ -29,7 +29,11 @@
       <li><a href="/reviews">Depoimentos</a></li>
     </ul>
   </nav>
+  {% if request.session.uid %}
+  <a class="redir_signup"><button class="signup_button"><i class="fa-solid fa-circle-user fa-2x"></i></button></a>
+  {% else %}
   <a class="redir_signup resize-animation-stopper" data-visible="false" href="/signup"><button class="signup_button">Sign-up</button></a>
+  {% endif %}
 </header>
 <!--navbar end-->
 <!--page content start-->
