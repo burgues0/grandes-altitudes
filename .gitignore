@@ -6,6 +6,7 @@ __pycache__
 db.sqlite3
 media
 site-ong-teste-firebase-adminsdk-hv5cb-af4565b3e4.json
+latest.dump
 
 # Environments 
 .env 
