@@ -1,4 +1,5 @@
 {% load static %}
+{% load socialaccount %}
 <!DOCTYPE html>
 <html lang="pt-br" class="h-100">
 <head>
@@ -29,10 +30,19 @@
       <li><a href="/reviews">Depoimentos</a></li>
     </ul>
   </nav>
-  {% if request.session.uid %}
-  <a class="redir_signup"><button class="signup_button"><i class="fa-solid fa-circle-user fa-2x"></i></button></a>
+  {% if user.is_authenticated %}
+    <div class="dropdown">
+      <a class="btn btn-secondary dropdown-toggle redir_signup" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="signup_button"><i class="fa-solid fa-circle-user fa-2x"></i></button></a>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
   {% else %}
-  <a class="redir_signup resize-animation-stopper" data-visible="false" href="/signup"><button class="signup_button">Sign-up</button></a>
+    <a class="redir_signup resize-animation-stopper" data-visible="false" href="{% provider_login_url 'google' %}"><button class="signup_button">Sign-up</button></a>
   {% endif %}
 </header>
 <!--navbar end-->

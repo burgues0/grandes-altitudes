@@ -1,4 +1,6 @@
 {% load static %}
+<!--quando passar a sepex, voltar o extends account/base.html-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +25,6 @@
                 {% for message in messages %}
                 <h5 style="color: red;">{{message}}</h5>
                 {% endfor %}
-                <a href="{% provider_login_url 'google' %}">Cadastre-se com Google</a>
                 <h1 class="h3 mb-3 fw-normal">Cadastre-se!</h1>
                 <div class="form-floating">
                     <input type="email" class="form-control" id="floatingInput" placeholder="seu.nome@exemplo.com" name="email">

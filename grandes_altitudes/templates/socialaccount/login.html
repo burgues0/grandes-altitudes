@@ -1,0 +1,37 @@
+{% extends "socialaccount/base.html" %}
+{% load i18n %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+{% if process == "connect" %}
+<h1>{% blocktrans with provider.name as provider %}Conectar com {{ provider }}{% endblocktrans %}</h1>
+
+<p>{% blocktrans with provider.name as provider %}Conectar-se com sua conta {{ provider }}.{% endblocktrans %}</p>
+{% else %}
+<h1>{% blocktrans with provider.name as provider %}Logar com {{ provider }}{% endblocktrans %}</h1>
+
+<p>{% blocktrans with provider.name as provider %}Fazer Login com sua conta {{ provider }}.{% endblocktrans %}</p>
+{% endif %}
+
+<p>aaaaaaaa</p>
+
+{% block form %}
+<form method="post">
+  {% csrf_token %}
+  {% for message in messages %}
+  <h5 style="color: red;">{{message}}</h5>
+  {% endfor %}
+  <h1 class="h3 mb-3 fw-normal">Cadastre-se!</h1>
+  <div class="row">
+    <div class="col">
+      <button type="submit" class="btn btn-outline-dark px-5 py-4" role="button" style="text-transform:none;">
+        <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+        Login with Google
+      </button>
+    </div>
+  </div>
+  <h3 class="mt-5 mb-3 text-muted">Grandes Altitudes</h3>
+</form>
+{% endblock %}
+{% endblock %}
