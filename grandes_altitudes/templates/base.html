@@ -32,14 +32,13 @@
   </nav>
   {% if user.is_authenticated %}
     <div class="dropdown">
-      <a class="btn btn-secondary dropdown-toggle redir_signup" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <button class="signup_button"><i class="fa-solid fa-circle-user fa-2x"></i></button></a>
+      <a class="redir_signup user_icon" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <img class="rounded-img" style="height: 80px; width: auto;" src="{{ user.socialaccount_set.all.0.get_avatar_url }}"/>
       </a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
+      <ul class="dropdown-menu" id="nav_links resize-animation-stopper">
+        <li><a class="dropdown-item" href="#">{{user.username}}</a></li>
+        <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+      </ul> 
     </div>
   {% else %}
     <a class="redir_signup resize-animation-stopper" data-visible="false" href="{% provider_login_url 'google' %}"><button class="signup_button">Sign-up</button></a>

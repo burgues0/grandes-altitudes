@@ -34,6 +34,10 @@ img {
     max-width: auto;
 }
 
+.user_icon img {
+    display: block;
+}
+
 .main-flex {
     display: flex;
     flex-direction: column;
@@ -133,10 +137,16 @@ a.redir_signup button:hover {
         position: fixed;
         z-index: 1000;
         inset: 130px 0 0 30%;
-        margin: min(30vh, 10rem) 3rem;
+        margin: min(30vh, 10rem) 2rem;
         flex-direction: column;
         transform: translateX(200%);
         transition: transform 250ms ease-out;
+    }
+
+    .user_icon{
+        display: block;
+        height: 80px; width: 100%;
+        margin-left: 3rem;
     }
 
     .redir_signup[data-visible="true"]{
