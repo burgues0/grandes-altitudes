@@ -1,4 +1,121 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Matérias{% endblock %}
-{% block content %}{% endblock %}
+{% block statics %}
+<style>
+    @import url('http://fonts.cdnfonts.com/css/chau-philomene-one');
+    .box{
+        text-align: justify;
+        -ms-text-justify: distribute-all-lines;
+        text-justify: distribute-all-lines;
+    }
+    .cell{
+        width: 30%;
+         vertical-align: top;
+        display: inline-block;
+        *display: inline;
+        zoom: 1
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="container subjects_container_color">
+    <img class="ong_logo" src="" alt="logos">
+    <div style="background-color: #dbcd08; text-align: center; width: 30%; margin: 0 auto; font-family: Chau Philomene One">
+        Matérias<br>Tenha acesso aos nosso vídeos e resumos.
+    </div>
+    <br>
+    <div aria-label="linha" class="box">
+        <div aria-label="materia" class="cell">
+            <div style="border-radius: 30px; background-color: yellow;">
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div style="text-align: center;">
+                Matemática
+            </div>
+            <div style="text-align: center;">
+                <button>Visualizarmatéria</button>
+            </div>
+        </div>
+        <div aria-label="materia" class="cell">
+            <div style="border-radius: 30px; background-color: yellow;">
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div style="text-align: center;">
+                Química
+            </div>
+            <div style="text-align: center;">
+                <button>Visualizarmatéria</button>
+            </div>
+        </div>
+        <div aria-label="materia" class="cell">
+            <div style="border-radius: 30px; background-color: yellow;">
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div style="text-align: center;">
+                Física
+            </div>
+            <div style="text-align: center;">
+                <button>Visualizarmatéria</button>
+            </div>
+        </div>
+        <span style="width: 100%; display: inline-block; font-size: 0; line-height: 0">
+        </span>
+    </div>
+    <div aria-label="linha" class="box">
+        <div aria-label="materia" class="cell">
+            <div style="border-radius: 30px; background-color: yellow;">
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div style="text-align: center;">
+                Historia
+            </div>
+            <div style="text-align: center;">
+                <button>Visualizarmatéria</button>
+            </div>
+        </div>
+        <div aria-label="materia" class="cell">
+            <div style="border-radius: 30px; background-color: yellow;">
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div style="text-align: center;">
+                Geografia
+            </div>
+            <div style="text-align: center;">
+                <button>Visualizarmatéria</button>
+            </div>
+        </div>
+        <div aria-label="materia" class="cell">
+            <div style="border-radius: 30px; background-color: yellow;">
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div style="text-align: center;">
+                Literatura
+            </div>
+            <div style="text-align: center;">
+                <button>Visualizarmatéria</button>
+            </div>
+        </div>
+        <span style="width: 100%;display: inline-block;font-size: 0;line-height: 0">
+        </span>
+    </div>
+</div>
+{% endblock %}

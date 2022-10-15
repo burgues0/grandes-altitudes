@@ -1,4 +1,30 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Doações{% endblock %}
-{% block content %}{% endblock %}
+{% block content %}
+<div class="container">
+  <div>
+      <h1>Bem-vindo a pagina de doações!</h1>
+      <p>Todos nós precisamos de um empurrãozinho, um “copo de café” para reforçar as energias.</p>
+      <p>Nosso serviço é puramente feito sem esperar retornos financeiros, por isso considere fazer uma doação!</p>
+      <h3>Opções para doar:</h3>
+      <div>
+          <h5>Pix:</h5>
+          <picture>
+            <source media="(min-width:768px)" width="15%" srcset="https://www.canalautismo.com.br/wp-content/uploads/2018/05/qrcode-RevistaAutismo.png">
+            <source media="(min-width:0px)" width="25%" srcset="https://www.canalautismo.com.br/wp-content/uploads/2018/05/qrcode-RevistaAutismo.png">
+            <img width="15%" src="https://www.canalautismo.com.br/wp-content/uploads/2018/05/qrcode-RevistaAutismo.png" alt="QrCode">
+          </picture>
+      </div>
+      <div>
+          <h5>Transferência:</h5>
+          <p>Agência: 157043</p>
+          <p>Conta: 696969</p>
+      </div>
+      <div>
+          <h5>PayPal:</h5>
+          <a href="www.corinthians.com.br">PayPal / Cartão de crédito</a>
+      </div>
+  </div>
+</div>
+{% endblock %}

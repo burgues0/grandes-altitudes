@@ -19,6 +19,7 @@ fbConfig = {
 firebase = pyrebase.initialize_app(fbConfig)
 auth = firebase.auth()
 
+
 # Create your views here.
 def index(request):
     last_three_reviews = Reviews.objects.all().order_by('id_review').reverse()[:3]
