@@ -1,4 +1,36 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block statics %}
+<link href="{% static '../static/css/about.css' %}" rel="stylesheet">
+{% endblock %}
 {% block title %}Quem somos?{% endblock %}
-{% block content %}{% endblock %}
+{% block content %}
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="p-3 mb-2 bg-warning text-dark bg-opacity-75 rounded-pill">
+            <div class="fs-2">
+                <p class="text-center">
+                    <!--<img class="ong_logo" src="{% static '../static/img/grandes-altitudes-logo.png'%}" alt="logo">--->
+                    <b>O QUE É A GRANDES A(L)TITUDES?</b>
+                </p>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row-center">
+        <div class="d-flex justify-content-center">
+            <img src="{% static '../static/img/equipe-horizontal.webp' %}" class="rounded-3" alt="...">
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <p class="text-md-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id dictum nisl. Nulla vitae aliquet dolor, id euismod odio. Aenean non sodales nisl, nec elementum est. Nullam ante lorem, pellentesque ut quam vel, dictum dapibus sem. Morbi et metus eget enim porta scelerisque in non lorem. Proin in vehicula ligula. Integer id leo in lorem ultrices viverra. Vestibulum nec mi vel lacus hendrerit pulvinar eget eu est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus felis nisl, porttitor vestibulum mi sit amet, euismod ultricies libero. Quisque semper blandit pretium. Nulla sed ante in lacus aliquam pulvinar. Sed faucibus rhoncus sapien, eget dignissim nisl tempor vel. Nullam id leo luctus, vehicula sapien sed, commodo metus.</p>
+        <p class="text-md-left">Donec lobortis orci erat, vitae suscipit turpis laoreet at. Nulla consectetur ultricies erat, non ultrices arcu congue et. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur est ipsum, vehicula non mi sed, tincidunt viverra sapien. Aliquam faucibus a ipsum eget condimentum. In hac habitasse platea dictumst. Aliquam tristique, eros a faucibus bibendum, purus mi vehicula odio, vulputate consectetur urna purus sed augue. Cras viverra tellus quis ante finibus rutrum id quis nunc. Curabitur lectus turpis, lobortis a dui quis, posuere luctus velit. In hac habitasse platea dictumst. Praesent finibus eros ac nisi placerat gravida. Curabitur porta vel sem eu laoreet. Nulla eros dui, scelerisque a blandit sit amet, interdum vitae sapien. Integer aliquam et arcu id pretium. Aenean metus mi, rhoncus ut lorem vel, ornare tincidunt nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p class="text-md-left">Quisque at auctor enim. Integer condimentum enim in sapien dapibus facilisis. Vivamus eget finibus nunc. Suspendisse lectus tortor, laoreet eu magna et, lacinia ornare orci. Aliquam erat volutpat. Sed felis nulla, cursus quis nunc non, aliquam congue leo. Curabitur non tellus nec sem aliquam pharetra at a lectus. Proin feugiat libero eu iaculis suscipit.</p>
+    </div>
+    <!--<div class="row">--->
+    <!--</div>--->
+    <br>
+</div>
+{% endblock %}
