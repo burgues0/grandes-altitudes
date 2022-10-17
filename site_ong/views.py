@@ -86,10 +86,46 @@ def about(request):
     return render(request, "about.html")
 
 def subjects(request):
+
     return render(request, "subjects.html")
 
 def donate(request):
+    num_agencia = 420420
+    num_conta = 696969
     return render(request, "donate.html")
 
 def reviews(request):
-    return render(request, "reviews.html")
+    a = 'a'
+    materias = {
+        "Matemática" : {
+            'desc': 'mat!',
+            'icon': '<i class="fa-light fa-atom fa-5x center_icon_card"></i>',
+            'url': '/subjects/matematica',
+        },
+        "Português" : {
+            'desc': 'port!',
+            'icon': '<i class="fa-light fa-atom fa-5x center_icon_card"></i>',
+            'url': '/subjects/portugues',
+        },
+        "Redação" : {
+            'desc': 'red!',
+            'icon': '<i class="fa-light fa-atom fa-5x center_icon_card"></i>',
+            'url': '/subjects/redacao',
+        },
+        "Química" : {
+            'desc': 'qui!',
+            'icon': '<i class="fa-light fa-atom fa-5x center_icon_card"></i>',
+            'url': '/subjects/quimica',
+        },
+        "Física" : {
+            'desc': 'fis!',
+            'icon': '<i class="fa-light fa-atom fa-5x center_icon_card"></i>',
+            'url': '/subjects/fisica',
+        },
+        "Biologia" : {
+            'desc': 'bio!',
+            'icon': '<i class="fa-light fa-atom fa-5x center_icon_card"></i>',
+            'url': '/subjects/biologia',
+        },
+    }
+    return render(request, "reviews.html", {"materias" : materias})

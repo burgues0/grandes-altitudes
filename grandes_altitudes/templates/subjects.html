@@ -19,103 +19,37 @@
 </style>
 {% endblock %}
 {% block content %}
-<div class="container subjects_container_color">
-    <img class="ong_logo" src="" alt="logos">
-    <div style="background-color: #dbcd08; text-align: center; width: 30%; margin: 0 auto; font-family: Chau Philomene One">
-        Matérias<br>Tenha acesso aos nosso vídeos e resumos.
+<div class="container">
+    <div class="row mt-4 mb-5">
+        <div class="mb-2 bg-warning text-dark bg-opacity-75 rounded" style="text-align: center; box-shadow: 12px 12px #dfdfdfbd;">
+            <div class="fs-2">
+                <p class="text-center mb-2">
+                    <b>Matérias</b>
+                </p>
+            </div>
+            <div class="fs-2">
+                <p class="text-center mb-2">
+                    Tenha acesso aos nossos vídeos e resumos.
+                </p>
+            </div>
+        </div>
     </div>
-    <br>
-    <div aria-label="linha" class="box">
-        <div aria-label="materia" class="cell">
-            <div style="border-radius: 30px; background-color: yellow;">
-                <br>
-                <br>
-                <br>
-                <br>
+    <div class="row justify-content-between">
+        {% for nome, attr in materias.items %}
+            {% for dados in attr.values %}
+            <div class="col-md-4">
+                <a href="/" class="reset-a">
+                    <div class="card text-center">
+                        <i class="fa-brands fa-tiktok fa-5x center_icon_card"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">{{nome}}</h5>
+                            <p class="card-text">{{dados}}</p>
+                        </div>
+                    </div>
+                </a>
             </div>
-            <div style="text-align: center;">
-                Matemática
-            </div>
-            <div style="text-align: center;">
-                <button>Visualizarmatéria</button>
-            </div>
-        </div>
-        <div aria-label="materia" class="cell">
-            <div style="border-radius: 30px; background-color: yellow;">
-                <br>
-                <br>
-                <br>
-                <br>
-            </div>
-            <div style="text-align: center;">
-                Química
-            </div>
-            <div style="text-align: center;">
-                <button>Visualizarmatéria</button>
-            </div>
-        </div>
-        <div aria-label="materia" class="cell">
-            <div style="border-radius: 30px; background-color: yellow;">
-                <br>
-                <br>
-                <br>
-                <br>
-            </div>
-            <div style="text-align: center;">
-                Física
-            </div>
-            <div style="text-align: center;">
-                <button>Visualizarmatéria</button>
-            </div>
-        </div>
-        <span style="width: 100%; display: inline-block; font-size: 0; line-height: 0">
-        </span>
-    </div>
-    <div aria-label="linha" class="box">
-        <div aria-label="materia" class="cell">
-            <div style="border-radius: 30px; background-color: yellow;">
-                <br>
-                <br>
-                <br>
-                <br>
-            </div>
-            <div style="text-align: center;">
-                Historia
-            </div>
-            <div style="text-align: center;">
-                <button>Visualizarmatéria</button>
-            </div>
-        </div>
-        <div aria-label="materia" class="cell">
-            <div style="border-radius: 30px; background-color: yellow;">
-                <br>
-                <br>
-                <br>
-                <br>
-            </div>
-            <div style="text-align: center;">
-                Geografia
-            </div>
-            <div style="text-align: center;">
-                <button>Visualizarmatéria</button>
-            </div>
-        </div>
-        <div aria-label="materia" class="cell">
-            <div style="border-radius: 30px; background-color: yellow;">
-                <br>
-                <br>
-                <br>
-                <br>
-            </div>
-            <div style="text-align: center;">
-                Literatura
-            </div>
-            <div style="text-align: center;">
-                <button>Visualizarmatéria</button>
-            </div>
-        </div>
-        <span style="width: 100%;display: inline-block;font-size: 0;line-height: 0">
-        </span>
+            {% endfor %}
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

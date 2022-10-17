@@ -200,9 +200,30 @@ a:active { text-decoration: none; }
     font-size: 10px;
 }
 
-.rounded-img{
+.rounded-img {
     border-radius: 50%;
     width: 140px;
     height: 140px;
     object-fit: cover;
+}
+
+.center_icon_card {
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.reset-a, .reset-a:visited, .reset-a:focus, .reset-a:active  {
+    text-decoration: none;
+    color: inherit;
+    outline: 0;
+    cursor: auto;
+}
+
+.reset-a:hover {
+    text-decoration: none;
+    color: inherit;
+    outline: 0;
+    cursor: pointer;
 }
