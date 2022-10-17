@@ -1,4 +1,6 @@
+from ast import Sub
 import os
+from tokenize import String
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import *
@@ -87,7 +89,52 @@ def about(request):
 
 def subjects(request):
 
-    return render(request, "subjects.html")
+    class Subject:
+        def __init__(self, title, icon, url, desc):
+            self.title = title
+            self.desc = desc
+            self.icon = icon
+            self.url = url
+
+    dados_materias = {
+        "Matemática" : {
+            'desc': 'tamo junto wellington!',
+            'icon': 'fa-brands fa-tiktok fa-5x center_icon_card',
+            'url': '/subjects/matematica',
+        },
+        "Português" : {
+            'desc': 'aline sz gustavo!',
+            'icon': 'fa-brands fa-tiktok fa-5x center_icon_card',
+            'url': '/subjects/portugues',
+        },
+        "Redação" : {
+            'desc': 'aytel for president!',
+            'icon': 'fa-brands fa-tiktok fa-5x center_icon_card',
+            'url': '/subjects/redacao',
+        },
+        "Química" : {
+            'desc': 'odemar king!',
+            'icon': 'fa-brands fa-tiktok fa-5x center_icon_card',
+            'url': '/subjects/quimica',
+        },
+        "Física" : {
+            'desc': 'juliana e mini juliana!',
+            'icon': 'fa-brands fa-tiktok fa-5x center_icon_card',
+            'url': '/subjects/fisica',
+        },
+        "Biologia" : {
+            'desc': 'wilber: o que é a vida!',
+            'icon': 'fa-brands fa-tiktok fa-5x center_icon_card',
+            'url': '/subjects/biologia',
+        },
+    }
+    
+    materias = []
+
+    for key in dados_materias.keys():
+        materias.append(Subject(key, dados_materias[key]['icon'], dados_materias[key]['url'], dados_materias[key]['desc']))
+
+    return render(request, "subjects.html", {"materias" : materias})
 
 def donate(request):
     num_agencia = 420420
@@ -95,37 +142,4 @@ def donate(request):
     return render(request, "donate.html")
 
 def reviews(request):
-    a = 'a'
-    materias = {
-        "Matemática" : {
-            'desc': 'mat!',
-            'icon': '<i class="fa-light fa-atom fa-5x center_icon_card"></i>',
-            'url': '/subjects/matematica',
-        },
-        "Português" : {
-            'desc': 'port!',
-            'icon': '<i class="fa-light fa-atom fa-5x center_icon_card"></i>',
-            'url': '/subjects/portugues',
-        },
-        "Redação" : {
-            'desc': 'red!',
-            'icon': '<i class="fa-light fa-atom fa-5x center_icon_card"></i>',
-            'url': '/subjects/redacao',
-        },
-        "Química" : {
-            'desc': 'qui!',
-            'icon': '<i class="fa-light fa-atom fa-5x center_icon_card"></i>',
-            'url': '/subjects/quimica',
-        },
-        "Física" : {
-            'desc': 'fis!',
-            'icon': '<i class="fa-light fa-atom fa-5x center_icon_card"></i>',
-            'url': '/subjects/fisica',
-        },
-        "Biologia" : {
-            'desc': 'bio!',
-            'icon': '<i class="fa-light fa-atom fa-5x center_icon_card"></i>',
-            'url': '/subjects/biologia',
-        },
-    }
-    return render(request, "reviews.html", {"materias" : materias})
+    return render(request, "reviews.html")

@@ -35,20 +35,18 @@
         </div>
     </div>
     <div class="row justify-content-between">
-        {% for nome, attr in materias.items %}
-            {% for dados in attr.values %}
-            <div class="col-md-4">
-                <a href="/" class="reset-a">
-                    <div class="card text-center">
-                        <i class="fa-brands fa-tiktok fa-5x center_icon_card"></i>
-                        <div class="card-body">
-                            <h5 class="card-title">{{nome}}</h5>
-                            <p class="card-text">{{dados}}</p>
-                        </div>
+        {% for materia in materias %}
+        <div class="col-md-4 mb-4">
+            <a href="{{materia.url}}" class="reset-a">
+                <div class="card text-center">
+                    <i class="{{materia.icon}}"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">{{materia.title}}</h5>
+                        <p class="card-text">{{materia.desc}}</p>
                     </div>
-                </a>
-            </div>
-            {% endfor %}
+                </div>
+            </a>
+        </div>
         {% endfor %}
     </div>
 </div>
