@@ -38,11 +38,10 @@
         {% for materia in materias %}
         <div class="col-md-4 mb-4">
             <a href="{{materia.url}}" class="reset-a">
-                <div class="card text-center">
+                <div class="card text-center border-warning">
                     <i class="{{materia.icon}}"></i>
                     <div class="card-body">
                         <h5 class="card-title">{{materia.title}}</h5>
-                        <p class="card-text">{{materia.desc}}</p>
                     </div>
                 </div>
             </a>

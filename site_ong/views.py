@@ -90,49 +90,56 @@ def about(request):
 def subjects(request):
 
     class Subject:
-        def __init__(self, title, icon, url, desc):
+        def __init__(self, title, icon, url, desc, color):
             self.title = title
             self.desc = desc
             self.icon = icon
             self.url = url
+            self.color = color
 
     dados_materias = {
         "Matemática" : {
             'desc': 'tamo junto wellington!',
-            'icon': 'fa-brands fa-tiktok fa-5x center_icon_card',
+            'icon': 'fa-solid fa-square-root-variable fa-5x center_icon_card',
             'url': '/subjects/matematica',
+            'color': '#73CEE3'
         },
         "Português" : {
             'desc': 'aline sz gustavo!',
-            'icon': 'fa-brands fa-tiktok fa-5x center_icon_card',
+            'icon': 'fa-solid fa-pen-to-square fa-5x center_icon_card',
             'url': '/subjects/portugues',
+            'color': '#73CEE3'
         },
         "Redação" : {
             'desc': 'aytel for president!',
-            'icon': 'fa-brands fa-tiktok fa-5x center_icon_card',
+            'icon': 'fa-solid fa-book-open fa-5x center_icon_card',
             'url': '/subjects/redacao',
+            'color': '#73CEE3'
         },
         "Química" : {
             'desc': 'odemar king!',
-            'icon': 'fa-brands fa-tiktok fa-5x center_icon_card',
+            'icon': 'fa-solid fa-atom fa-5x center_icon_card',
             'url': '/subjects/quimica',
+            'color': '#73CEE3'
         },
         "Física" : {
             'desc': 'juliana e mini juliana!',
-            'icon': 'fa-brands fa-tiktok fa-5x center_icon_card',
+            'icon': 'fa-solid fa-brain fa-5x center_icon_card',
             'url': '/subjects/fisica',
+            'color': '#73CEE3#73CEE3'
         },
         "Biologia" : {
             'desc': 'wilber: o que é a vida!',
-            'icon': 'fa-brands fa-tiktok fa-5x center_icon_card',
+            'icon': 'fa-solid fa-dna fa-5x center_icon_card',
             'url': '/subjects/biologia',
+            'color': '#73CEE3'
         },
     }
-    
+
     materias = []
 
     for key in dados_materias.keys():
-        materias.append(Subject(key, dados_materias[key]['icon'], dados_materias[key]['url'], dados_materias[key]['desc']))
+        materias.append(Subject(key, dados_materias[key]['icon'], dados_materias[key]['url'], dados_materias[key]['desc'], dados_materias[key]['color']))
 
     return render(request, "subjects.html", {"materias" : materias})
 
