@@ -71,6 +71,16 @@ img {
     max-width: auto;
 }
 
+.big_img_responsive {
+    width: 100%; height: auto; object-fit: cover;
+}
+
+.cover_img_home {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
 .user_icon img {
     display: block;
 }
