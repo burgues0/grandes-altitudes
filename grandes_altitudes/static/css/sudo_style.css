@@ -1,5 +1,8 @@
 /* caso a gente queira colocar algum css especifico para sobescrever o do bootstrap */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
 
 /*
 1px = 0,0625rem
@@ -17,6 +20,39 @@ standard blue
     margin: 0;
 }
 
+h1 {
+    font-family: 'Rubik', sans-serif;
+}
+
+h2 {
+    font-family: 'Nunito', sans-serif;
+}
+
+h3 {
+    font-family: 'Nunito', sans-serif;
+}
+
+h4 {
+    font-family: 'Heebo', sans-serif;
+}
+
+h5 {
+    font-family: 'Heebo', sans-serif;
+}
+
+h5>.subtitle {
+    color:#252323;
+    line-height: 0.6;
+}
+
+h6 {
+    font-family: 'Heebo', sans-serif;    
+}
+
+p {
+    font-family: 'Heebo', sans-serif;
+}
+
 body {
     overflow-x: hidden;
     min-height: 100vh;
@@ -27,6 +63,7 @@ body {
 
 footer {
     margin-top: auto;
+    font-family: 'Montserrat', sans-serif;
 }
 
 img {
