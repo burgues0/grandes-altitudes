@@ -88,7 +88,6 @@ def about(request):
     return render(request, "about.html")
 
 def subjects(request):
-
     class Subject:
         def __init__(self, title, icon, url, desc, color):
             self.title = title
@@ -150,3 +149,21 @@ def donate(request):
 
 def reviews(request):
     return render(request, "reviews.html")
+
+def subj_mat(request):
+    return render(request, "subjects/matematica.html")
+
+def subj_port(request):
+    return render(request, "subjects/portugues.html")
+
+def subj_red(request):
+    return render(request, "subjects/redacao.html")
+
+def subj_qui(request):
+    return render(request, "subjects/quimica.html")
+
+def subj_fis(request):
+    return render(request, "subjects/fisica.html")
+
+def subj_bio(request):
+    return render(request, "subjects/biologia.html")
